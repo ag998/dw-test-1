@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+var globalobject={};
+function Displayobjectproperty(personobject)
+{	globalobject=personobject;
+	alert("Properties populated in text areas");
+	textfield6.value=personobject.name;
+	textfield2.value=personobject.age;
+	var comp=personobject.getcompany;
+	textfield3.value=comp();
+	textfield4.value=personobject.prod[1];
+	textfield5.value=personobject.nestedobj.name;
+	/*var d=prompt("Change property","");
+	if(d=="Y" || d=="y")
+	{
+		//alert("in change prop branch");
+		changeprop(personobject);
+	}*/
+}
+
+function changeproperty()
+{ 
+	changeprop(globalobject);
+}
+</script>
+</head>
+<body>
+<p>Name 
+  <input type="text" name="textfield6" id="textfield6" />
+  <input type="button" name="button6" id="button6" value="Change name" onclick="changeproperty()"/>
+</p>
+<p>Age 
+  <input type="text" name="textfield2" id="textfield2" />
+  <input type="button" name="button2" id="button2" value="Change Age" onclick="changeproperty()"/>
+</p>
+<p>Company 
+  <input type="text" name="textfield3" id="textfield3" />
+  <input type="button" name="button3" id="button3" value="Change Company" onclick="changeproperty()"/>
+</p>
+<p>Product by array 
+  <input type="text" name="textfield4" id="textfield4" />
+  <input type="button" name="button4" id="button4" value="Change Product" onclick="changeproperty()"/>
+</p>
+<p>Nested Obj Name 
+  <input type="text" name="textfield5" id="textfield5" />
+  <input type="button" name="button5" id="button5" value="Change Nested Name" onclick="changeproperty()"/>
+</p>
+<p>
+	<input type="button" name="button" id="button" value="Change Property" onclick="changeproperty()" />
+</p>
+</body>
+</html>
